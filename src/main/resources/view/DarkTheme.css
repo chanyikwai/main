@@ -389,3 +389,13 @@
     -fx-text-fill: white;
     -fx-background-color: black;
 }
+
+#tags .pink {
+    -fx-text-fill: black;
+    -fx-background-color: pink;
+}
+
+#tags .brown {
+    -fx-text-fill: white;
+    -fx-background-color: brown;
+}

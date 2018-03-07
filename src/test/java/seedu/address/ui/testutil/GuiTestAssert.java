@@ -49,19 +49,19 @@ public class GuiTestAssert {
         case "owesMoney":
             return "red";
 
-        case "colleague":
-            return "yellow";
-
+        case "colleagues":
         case "neighbours":
-        case "family":
-        case "friend":
-            return "green";
-
-        case "friends":
             return "orange";
 
+        case "friends":
+            return "grey";
+
+        case "friend":
+        case "family":
+            return "yellow";
+
         case "husband":
-            return "white";
+            return "brown";
 
         default:
             fail(tagName + " has no color assignment.");
