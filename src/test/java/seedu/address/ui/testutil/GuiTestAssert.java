@@ -29,7 +29,8 @@ public class GuiTestAssert {
         assertEquals(expectedCard.getPhone(), actualCard.getPhone());
         assertEquals(expectedCard.getTags(), actualCard.getTags());
 
-        expectedCard.getTags().forEach(tag -> assertEquals(expectedCard.getTagStyleClasses(tag), actualCard.getTagStyleClasses(tag)));
+        expectedCard.getTags().forEach(tag ->
+                assertEquals(expectedCard.getTagStyleClasses(tag), actualCard.getTagStyleClasses(tag)));
     }
 
     /**
@@ -45,34 +46,38 @@ public class GuiTestAssert {
 
     private static String getTagColorStyle(String tagName) {
         switch (tagName) {
-            case "classmates":
-            case "owesMoney":
-                return "red";
+        case "classmates":
+        case "owesMoney":
+            return "red";
 
-            case "colleague":
-                return "yellow";
+        case "colleague":
+            return "yellow";
 
-            case "neighbours":
-            case "family":
-            case "friend":
-                return "green";
+        case "neighbours":
+        case "family":
+        case "friend":
+            return "green";
 
-            case "friends":
-                return "orange";
+        case "friends":
+            return "orange";
 
-            case "husband":
-                return "white";
+        case "husband":
+            return "white";
 
-                default:
-                    fail(tagName + " has no color assignment.");
-                    return "";
+        default:
+            fail(tagName + " has no color assignment.");
+            return "";
         }
     }
 
     private static void assertTagsEqual(Person expectedPerson, PersonCardHandle actualCard) {
-        List<String> expectedTags = expectedPerson.getTags().stream().map(tag -> tag.tagName).collect(Collectors.toList());
+        List<String> expectedTags = expectedPerson.getTags()
+                .stream()
+                .map(tag -> tag.tagName)
+                .collect(Collectors.toList());
         assertEquals(expectedTags, actualCard.getTags());
-        expectedTags.forEach(tag -> assertEquals(Arrays.asList(DEFAULT_LABEL_STYLE, getTagColorStyle(tag)), actualCard.getTagStyleClasses(tag)));
+        expectedTags.forEach(tag ->
+                assertEquals(Arrays.asList(DEFAULT_LABEL_STYLE, getTagColorStyle(tag)), actualCard.getTagStyleClasses(tag)));
     }
 
     /**
