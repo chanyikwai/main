@@ -7,9 +7,11 @@ import com.google.common.eventbus.Subscribe;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.MenuItem;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextInputControl;
 import javafx.scene.input.KeyCombination;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import seedu.address.commons.core.Config;
@@ -34,11 +36,15 @@ public class MainWindow extends UiPart<Stage> {
     private Logic logic;
 
     // Independent Ui parts residing in this Ui container
+    private SchedulePanel schedulePanel;
     private BrowserPanel browserPanel;
     private CinemaListPanel cinemaListPanel;
     private MovieListPanel movieListPanel;
     private Config config;
     private UserPrefs prefs;
+
+    @FXML
+    private AnchorPane scheduleTimetablePlaceholder;
 
     @FXML
     private StackPane browserPlaceholder;
@@ -120,6 +126,9 @@ public class MainWindow extends UiPart<Stage> {
      * Fills up all the placeholders of this window.
      */
     void fillInnerParts() {
+        schedulePanel = new SchedulePanel();
+        scheduleTimetablePlaceholder.getChildren().add(schedulePanel.getRoot());
+
         browserPanel = new BrowserPanel();
         browserPlaceholder.getChildren().add(browserPanel.getRoot());
 

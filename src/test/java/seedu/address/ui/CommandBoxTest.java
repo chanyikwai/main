@@ -214,6 +214,20 @@ public class CommandBoxTest extends GuiUnitTest {
         assertNotEqualCommandKeywordTag(helpCommandKeyword, wrongKeywordColor);
     }
 
+    @Test
+    public void initializeKeywordColorCoding_isAddMovieGreen_returnTrue() {
+        String addMovieCommandKeyword = "addmovie";
+        String correctKeywordColor = "green";
+        assertEqualCommandKeywordTag(addMovieCommandKeyword, correctKeywordColor);
+    }
+
+    @Test
+    public void initializeKeywordColorCoding_isAddMovieGreen_returnFalse() {
+        String addMovieCommandKeyword = "addmovie";
+        String wrongKeywordColor = "red";
+        assertNotEqualCommandKeywordTag(addMovieCommandKeyword, wrongKeywordColor);
+    }
+
     /**
      * Runs a command that succeeds, then verifies that <br>
      *     - tag is cleared

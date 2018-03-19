@@ -18,6 +18,7 @@ import seedu.address.commons.events.ui.NewResultAvailableEvent;
 import seedu.address.logic.ListElementPointer;
 import seedu.address.logic.Logic;
 import seedu.address.logic.commands.AddCommand;
+import seedu.address.logic.commands.AddMovieCommand;
 import seedu.address.logic.commands.ClearCommand;
 import seedu.address.logic.commands.CommandResult;
 import seedu.address.logic.commands.DeleteCommand;
@@ -282,6 +283,7 @@ public class CommandBox extends UiPart<Region> {
         keywordColorCode.put(RedoCommand.COMMAND_WORD, "red");
         keywordColorCode.put(UndoCommand.COMMAND_WORD, "red");
         keywordColorCode.put(HistoryCommand.COMMAND_WORD, "pink");
+        keywordColorCode.put(AddMovieCommand.COMMAND_WORD, "green");
         return keywordColorCode;
     }
 
