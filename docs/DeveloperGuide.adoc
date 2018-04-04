@@ -637,11 +637,11 @@ are specified, MVP will combine the predicates to get a smaller subset of result
 Movies can be found by using the `findmovie` command. The command is parsed by `FindMovieCommandParser` and be executed
 in `FindMovieCommand`.
 
-Figure below shows the interaction between the classes.
+The figure below shows the interaction between the classes.
 
 *Finding by `MovieName` or/and `StartDate` or/and `Tag`*
 
-.Sequence diagram of findmovie command
+.Sequence diagram of findmovie Command
 image::FindMovieSequenceDiagram.PNG[width="1000"]
 
 ==== Implementation details
@@ -1354,7 +1354,8 @@ See this https://github.com/se-edu/addressbook-level4/pull/599[PR] for the step-
 
 *Feature contribution*: +
 
-Chan Jun Yuan
+Chan Jun Yuan +
+Github: https://github.com/tinyjy94
 
 Major feature: *Cloud sync with encryption* +
 This allows the user to work from multiple endpoints. For example, the `movieplanner.xml` file can be stored in the
@@ -1364,7 +1365,8 @@ the schedules of the cinema theaters through encrypting the data.
 Minor feature: *Theater commands (add, delete)* +
 `AddTheater` and `DeleteTheater` commands will give user flexibility to expand or shrink the size of the cinema.
 
-Chan Yik Wai
+Chan Yik Wai +
+Github: https://github.com/chanyikwai
 
 Major feature: *Email* +
 This allows the user to send out emails to the cinema branch managers if there are any updates to the cinema schedules.
@@ -1372,7 +1374,8 @@ This allows the user to send out emails to the cinema branch managers if there a
 Minor feature: *Shortcut keys* +
 This allows the user to press shortcut keys eg. (Ctrl-Z, Ctrl-Y) to undo and redo.
 
-Lai Qi Wei
+Lai Qi Wei +
+Github: https://github.com/qwlai
 
 Major feature: *Scheduling system* +
 This allows the user to add a movie to an available timeslot in the cinema's theater. User will also be able to view the
@@ -1381,7 +1384,8 @@ schedule of the cinema theaters.
 Minor feature: *Add movie panel to UI* +
 This allows the user to view a list of movies in real time after adding or editing a movie's detail.
 
-Oh Han Yi
+Oh Han Yi +
+Github: https://github.com/slothhy
 
 Major feature: *Enhance FindMovie command* +
 This allows the user to find movies by `Category`, `MovieName` or `StartDate`. This is such that it filters out the result and
@@ -1527,25 +1531,6 @@ visual indicators.
 <<DeveloperGuide.adoc#, Back to top>>
 
 [appendix]
-== Product Survey
-
-*Product Name*
-
-Author: ...
-
-Pros:
-
-* ...
-* ...
-
-Cons:
-
-* ...
-* ...
-
-<<DeveloperGuide.adoc#, Back to top>>
-
-[appendix]
 == Instructions for Manual Testing
 
 Given below are instructions to test the app manually.
@@ -1567,8 +1552,6 @@ These instructions only provide a starting point for testers to work on; testers
 .. Re-launch the app by double-clicking the jar file. +
    Expected: The most recent window size and location is retained.
 
-_{ more test cases ... }_
-
 === Deleting a cinema
 
 . Deleting a cinema while all cinemas are listed
@@ -1580,15 +1563,5 @@ _{ more test cases ... }_
    Expected: No cinema is deleted. Error details shown in the status message. Status bar remains the same.
 .. Other incorrect delete commands to try: `delete`, `delete x` (where x is larger than the list size) _{give more}_ +
    Expected: Similar to previous.
-
-_{ more test cases ... }_
-
-=== Saving data
-
-. Dealing with missing/corrupted data files
-
-.. _{explain how to simulate a missing/corrupted file and the expected behavior}_
-
-_{ more test cases ... }_
 
 <<DeveloperGuide.adoc#, Back to top>>
